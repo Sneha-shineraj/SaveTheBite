@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaveTheBite! Website</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>SaveTheBite</h1>
+        <p class="slogan">Create, Save & Share Your Perfect Recipes!</p>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#Recipe">Recipes</a></li>
+                <li><a href="#Expire">Expire Date</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Home</h2>
+        <p>Welcome to SaveTheBite! At SaveTheBite, we're passionate about helping you make the most of your groceries.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            Our platform empowers you to track expiration dates effortlessly and provides tailored recipe suggestions to ensure every bite counts.
+        </p>
+        <p>Key Features:</p>
+        <ul>
+            <li>Manual Entry: Easily input your grocery items and their expiration dates.</li>
+            <li>Expiration Alerts: Receive timely notifications before items expire.</li>
+            <li>Recipe Recommendations: Discover delicious recipes using ingredients nearing their expiration.</li>
+        </ul>
+    </section>
+
+    <section id="Recipe">
+        <h2>Recipes</h2>
+        <p>No More Wasted Food – Cook It Before It Expires.</p>
+
+        <h3>Generated Recipe:</h3>
+        <div id="recipeResult">
+            <p>Recipe will appear here...</p>
+        </div>
+    </section>
+
+    <section id="Expire">
+        <h2>Shelf Life</h2>
+        <form id="ingredientForm" enctype="multipart/form-data">
+            <label for="name">Item Name:</label>
+            <input type="text" id="name" name="name" required placeholder="e.g., Milk">
+            
+            <label for="expire_date">Expire Date:</label>
+            <input type="date" id="expire_date" name="expire_date" required>
+            
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" required placeholder="e.g., 1">
+            
+            <button type="submit">Submit</button>
+        </form>
+        <p id="responseMessage"></p>
+    </section>
+
+    <section id="login">
+        <div class="login-form">
+            <h2>Login to SaveTheBite</h2>
+            <form id="loginForm" action="#" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+            <p id="loginResponseMessage"></p>
+        </div>
+    </section>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
