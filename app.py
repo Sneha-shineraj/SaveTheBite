@@ -92,5 +92,5 @@ def save_ingredients():
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)}), 500
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run(host='0.0.0.0',port=10000)
