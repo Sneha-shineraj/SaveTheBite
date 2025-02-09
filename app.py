@@ -2,12 +2,16 @@ from flask import Flask, request, jsonify, render_template
 import google.generativeai as genai
 from datetime import datetime, timedelta
 from flask_cors import CORS
+import os
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "http://127.0.0.1:5000"}})
 
 # Configure Gemini API
 genai.configure(api_key='AIzaSyCluLykCgMUbh8BiEdiX52vXZuwBX5vvPA')  # Replace with your Gemini API key
+load_dotenv()
+API_KEY=os.getenv("GEMINI_API_KEY")
 
 try:
     model=genai.GenerativeModel("gemini-pro")
