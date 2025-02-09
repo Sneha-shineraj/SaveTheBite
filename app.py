@@ -93,4 +93,4 @@ def save_ingredients():
         return jsonify({'success': False, 'error': str(e)}), 500
 
 if _name_ == '_main_':
-    app.run(host='0.0.0.0', port=10000)
+    app.run(host='0.0.0.0',port=10000)
